@@ -10,5 +10,8 @@ def saludar_a(request, nombre):
 def saludar_a_alguien(request):
     context = {}
 
+    if request.GET:
+        context["nombre"] = request.GET["nombre"]
+
     return render(request, "Mi_App/index.html", context)
-    
+
