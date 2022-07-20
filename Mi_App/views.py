@@ -6,4 +6,9 @@ def saludo(request):
 
 def saludar_a(request, nombre):
     return HttpResponse(f"hola com estas{nombre}")
+
+def saludar_a_alguien(request):
+    context = {}
+
+    return render(request, "Mi_App/index.html", context)
     
